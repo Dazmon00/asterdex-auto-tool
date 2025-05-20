@@ -1,0 +1,18 @@
+{
+    "account1": {
+        "api_key": "你的第一个账号API Key",
+        "api_secret": "你的第一个账号API Secret"
+    },
+    "account2": {
+        "api_key": "你的第二个账号API Key",
+        "api_secret": "你的第二个账号API Secret"
+    },
+    "trading": {
+        "symbol": "ETHUSDT",
+        "usdt_amount": 30,
+        "position_side": "BOTH",
+        "order_type": "MARKET",
+        "leverage": 3,
+        "wait_seconds": 30
+    }
+} 
