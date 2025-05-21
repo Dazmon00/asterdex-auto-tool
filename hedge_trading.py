@@ -48,8 +48,13 @@ class TradingUI:
         
     def generate_layout(self):
         # 创建标题面板
-        title = Panel(
+        title_panel = Panel(
             Text("AsterDex 对冲交易系统", justify="center", style="bold white"),
+            style="blue"
+        )
+        
+        author_panel = Panel(
+            Text("免费开源，推特：@ddazmon", justify="center", style="bold white"),
             style="blue"
         )
         
@@ -118,11 +123,14 @@ class TradingUI:
 
         # 组合所有面板
         self.layout.split(
-            Layout(name="header", size=3),
+            Layout(name="header", size=6),
             Layout(name="main"),
         )
         
-        self.layout["header"].update(title)
+        self.layout["header"].split(
+            Layout(title_panel, ratio=1),
+            Layout(author_panel, ratio=1)
+        )
         self.layout["main"].split_row(
             Layout(market_panel, ratio=1),
             Layout(account_panel, ratio=2)
